@@ -28,7 +28,7 @@ def handle():
                 print('断开连接:',s.getpeername())
                 socks.remove(s)
                 continue
-            for ss in socks:    #收到信息后群发
+            for ss in socks:
                 ss.send(data)
   
 t = threading.Thread(target=handle)  # 子线程
